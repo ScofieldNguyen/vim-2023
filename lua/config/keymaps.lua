@@ -20,9 +20,9 @@ keymap.set("n", "<C-a>", "gg<S-v>G")
 keymap.set("n", "<C-m>", "<C-i>", opts)
 
 -- buffers
-keymap.set("n", "<Right>", ":BufferLineCycleNext<Return>", opts)
-keymap.set("n", "<Left>", ":BufferLineCyclePrev<Return>", opts)
-keymap.set("n", ",D", "<leader>bo", { remap = true }) -- delete others buffer
+keymap.set("n", "<tab>", ":BufferLineCycleNext<Return>", opts)
+keymap.set("n", "<S-tab>", ":BufferLineCyclePrev<Return>", opts)
+keymap.set("n", "<C-w>", ":bd<Return>", opts) -- delete others buffer
 
 -- Split windows
 keymap.set("n", "<C-x>", ":split<Return>", opts)

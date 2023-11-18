@@ -1,6 +1,6 @@
 vim.o.background = "dark"
 vim.cmd([[
-colorscheme gruvbox
+" colorscheme gruvbox
 hi Normal guibg=NONE ctermbg=NONE
 ]])
 require("gruvbox").setup({
