@@ -52,9 +52,6 @@ keymap.set("n", "<C-p>", "<leader><space>", remap)
 -- Search global
 keymap.set("n", "<C-S-f>", "<leader>/", remap)
 
--- Recent files
-keymap.set("n", "<C-e>", "<leader>fr", remap)
-
 -- Surround
 keymap.set("v", "S", "gsa", remap)
 keymap.set("n", "dS", "gsd", remap)
