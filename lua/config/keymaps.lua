@@ -62,3 +62,6 @@ keymap.set("n", "<C-n>", "<space>e", remap)
 
 -- search inside selection
 keymap.set("v", "<C-f>", "<Esc>/\\%V")
+
+-- run test
+keymap.set("n", "<C-t>", ":Jest<Cr>")
