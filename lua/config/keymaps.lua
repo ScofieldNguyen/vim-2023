@@ -47,10 +47,10 @@ keymap.set("n", "<leader>N", "<leader>cA", remap)
 keymap.set("n", "<leader>rn", "<leader>cr", remap)
 
 -- Find files
-keymap.set("n", "<C-p>", "<leader><space>", remap)
+keymap.set("n", "<C-p>", "<leader>fF", remap)
 
 -- Search global
-keymap.set("n", "<C-S-f>", "<leader>/", remap)
+keymap.set("n", "<space>sf", "<space>sG", remap)
 
 -- Surround
 keymap.set("v", "S", "gsa", remap)
@@ -59,3 +59,6 @@ keymap.set("n", "rS", "gsd", remap)
 
 -- open tree
 keymap.set("n", "<C-n>", "<space>e", remap)
+
+-- search inside selection
+keymap.set("v", "<C-f>", "<Esc>/\\%V")
