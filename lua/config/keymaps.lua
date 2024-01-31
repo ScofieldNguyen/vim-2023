@@ -59,3 +59,6 @@ keymap.set("n", "rS", "gsd", remap)
 
 -- open tree
 keymap.set("n", "<C-n>", "<space>e", remap)
+
+-- run test
+keymap.set("n", "<C-t>", ":Jest<Cr>")
