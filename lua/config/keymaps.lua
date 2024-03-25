@@ -65,3 +65,4 @@ keymap.set("v", "<C-f>", "<Esc>/\\%V")
 
 -- run test
 keymap.set("n", "<C-t>", ":Jest<Cr>")
+keymap.set("n", "<C-f>", ":JestFile<Cr>")
