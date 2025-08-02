@@ -6,7 +6,7 @@ return {
       filesystem = {
         bind_to_cwd = false,
         follow_current_file = {
-          enabled = false,
+          enabled = true,
         },
         filtered_items = {
           visible = true,
