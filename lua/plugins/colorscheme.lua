@@ -34,12 +34,12 @@ return {
 
     -- Set highlight groups
     local highlights = {
-      Normal = { fg = colors.fg, bg = colors.bg },
-      NormalFloat = { fg = colors.fg, bg = colors.bg },
-      NormalNC = { fg = colors.fg, bg = colors.bg },
-      EndOfBuffer = { fg = colors.bg, bg = colors.bg },
-      SignColumn = { bg = colors.bg },
-      FoldColumn = { bg = colors.bg },
+      Normal = { fg = colors.fg, bg = "NONE" },
+      NormalFloat = { fg = colors.fg, bg = "NONE" },
+      NormalNC = { fg = colors.fg, bg = "NONE" },
+      EndOfBuffer = { fg = colors.bg, bg = "NONE" },
+      SignColumn = { bg = "NONE" },
+      FoldColumn = { bg = "NONE" },
       Comment = { fg = colors.bright_black, italic = true },
       Constant = { fg = colors.bright_cyan },
       String = { fg = colors.bright_green },
@@ -73,8 +73,8 @@ return {
       Debug = { fg = colors.bright_red },
       Underlined = { fg = colors.bright_cyan, underline = true },
       Ignore = { fg = colors.bright_black },
-      Error = { fg = colors.bright_red, bg = colors.bg },
-      Todo = { fg = colors.bright_yellow, bg = colors.bg, bold = true },
+      Error = { fg = colors.bright_red, bg = "NONE" },
+      Todo = { fg = colors.bright_yellow, bg = "NONE", bold = true },
 
       -- UI elements
       LineNr = { fg = colors.bright_black },
@@ -98,19 +98,19 @@ return {
       GitSignsDelete = { fg = colors.bright_red },
 
       -- Telescope
-      TelescopeNormal = { fg = colors.fg, bg = colors.bg },
-      TelescopeBorder = { fg = colors.bright_blue, bg = colors.bg },
-      TelescopePromptNormal = { fg = colors.fg, bg = colors.bg },
-      TelescopePromptBorder = { fg = colors.bright_blue, bg = colors.bg },
+      TelescopeNormal = { fg = colors.fg, bg = "NONE" },
+      TelescopeBorder = { fg = colors.bright_blue, bg = "NONE" },
+      TelescopePromptNormal = { fg = colors.fg, bg = "NONE" },
+      TelescopePromptBorder = { fg = colors.bright_blue, bg = "NONE" },
       TelescopePromptTitle = { fg = colors.bright_white, bg = colors.bright_blue },
       TelescopePreviewTitle = { fg = colors.bright_white, bg = colors.bright_green },
       TelescopeResultsTitle = { fg = colors.bright_white, bg = colors.bright_red },
 
       -- Neo-tree
-      NeoTreeNormal = { fg = colors.fg, bg = colors.bg },
-      NeoTreeNormalNC = { fg = colors.fg, bg = colors.bg },
-      NeoTreeEndOfBuffer = { fg = colors.bg, bg = colors.bg },
-      NeoTreeWinSeparator = { fg = colors.bright_black, bg = colors.bg },
+      NeoTreeNormal = { fg = colors.fg, bg = "NONE" },
+      NeoTreeNormalNC = { fg = colors.fg, bg = "NONE" },
+      NeoTreeEndOfBuffer = { fg = colors.bg, bg = "NONE" },
+      NeoTreeWinSeparator = { fg = colors.bright_black, bg = "NONE" },
       NeoTreeRootName = { fg = colors.bright_white, bold = true },
       NeoTreeDirectoryName = { fg = colors.bright_white, bold = true },
       NeoTreeDirectoryIcon = { fg = colors.bright_cyan },
@@ -138,17 +138,17 @@ return {
     -- Set colorscheme name
     vim.g.colors_name = "alacritty_blue"
 
-    -- Force background for all windows
-    vim.cmd("highlight Normal guifg=#FFFFFF guibg=#010080")
-    vim.cmd("highlight NormalNC guifg=#FFFFFF guibg=#010080")
-    vim.cmd("highlight NormalFloat guifg=#FFFFFF guibg=#010080")
+    -- Force transparent background for all windows
+    vim.cmd("highlight Normal guifg=#FFFFFF guibg=NONE")
+    vim.cmd("highlight NormalNC guifg=#FFFFFF guibg=NONE")
+    vim.cmd("highlight NormalFloat guifg=#FFFFFF guibg=NONE")
 
     -- Clear any plugin-specific backgrounds that might override
     vim.api.nvim_create_autocmd("ColorScheme", {
       pattern = "*",
       callback = function()
-        vim.cmd("highlight Normal guifg=#FFFFFF guibg=#010080")
-        vim.cmd("highlight NormalNC guifg=#FFFFFF guibg=#010080")
+        vim.cmd("highlight Normal guifg=#FFFFFF guibg=NONE")
+        vim.cmd("highlight NormalNC guifg=#FFFFFF guibg=NONE")
       end,
     })
   end,
