@@ -3,6 +3,7 @@
 -- Add any additional options here
 vim.g.snacks_animate = false
 vim.g.root_spec = { "cwd" }
+vim.opt.swapfile = false
 
 -- neovide config
 if vim.g.neovide then
